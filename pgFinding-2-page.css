@@ -1,0 +1,147 @@
+body{
+    padding: 0;
+    margin: 0;
+   
+}
+
+.secondface{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+  
+   
+}
+.secondface .right-side{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+} 
+.secondface .left-side{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.forms {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 50px;
+    background-color: #512B1A;
+    padding: 10px;
+}
+
+.forms input {
+    height: 40px;
+    padding: 0 10px;
+}
+
+.forms .search {
+    background-color: rgb(220, 25, 90);
+    color: white;
+    width: 100px;
+}
+.main2{
+    height: auto;
+    
+}
+.maincontaner{
+    display: flex;
+    height: 100%;
+
+}
+.maincontaner img{
+    width: 65%;
+    
+}
+.left-div{
+    width: 50%;
+    border: 2px solid;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.right-div{
+    padding: 20px;
+    width: 50%;
+    border: 2px solid;
+}
+.range{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.cart-items img{
+    border-radius: 100% ;
+    width: 60px;
+    height: 80px;
+    box-shadow: 0 2px 5px #B7B1AE;
+    box-sizing: border-box;
+}
+.cart-items{
+    display: flex;
+    justify-content: end;
+  
+ 
+}
+.section{
+overflow: scroll;
+scrollbar-width: none;
+}
+
+.cartes{
+    display: flex;
+    margin: 40px;
+    box-shadow: 0 2px 5px #B7B1AE;
+   box-sizing: border-box;
+   height: 250px;
+ 
+
+}
+.review{
+    display: flex;
+  align-items: center;
+}
+.review img{
+    width: 100px;
+}
+.cart-items{
+    width: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-position: center center;
+    box-sizing: border-box;
+}
+.title-containers{
+    width: 50%;
+
+}
+.Carts{
+    gap: 20px;
+    border: 2px solid;
+}
+.homestay-list{
+ height:320px;
+
+}
+.paragrag{
+ color:  #512B1A;
+  text-align: start;
+
+    font-size: 20px;
+}
+.heading{
+    color:  #512B1A;
+    text-align: start;
+}
