@@ -1,19 +1,20 @@
 function renderContener(){
     const container=document.querySelector("#container");
+    container.innerHTML = '';
     container.innerHTML=`    <header>
                 <div class="left-side">
                     <img src="https://www.homestay.com/assets/logo-homestay-a2a7f2814cbfa356e29c846b314b58d512acdfc5750a0c7246ff81432cf8c713.svg" width="140px">
                 </div>
-                <div class="right-side">
-                    <div>DESTINATIONS</div>
-                    <div>INSPIRE ME</div>
-                    <div>SIGN UP</div>
-                    <div>LOG IN</div>
-                    <div>ENGLISH</div>
-                    <div>HELP</div>
-                    <div>LIST A ROOM</div>
+                <div class="right-side"  id="nav-items">
+                    <div><a href="#homestayInspiration">INSPIRE ME</a></div>
+                    <div> <a href="#homestayWeLove">OUR PICKS</a></div>
+                    <div> <a href="#visiter">TRAVAL</a></div>
+                    <div> <a href="#container">FIND A HOMESTAY</a></div>
+                    <div class="list">  <a href="#monetise">LIST A ROOM</a></div>
                 </div>
+                 <div class="menu-icon" id="menu-icon">&#9776;</div>
         </header>
+        <main>
         <div class="main" id="main">
             <div class="main-box">
             <h1>Find Your Home Away From Home</h1>
@@ -30,14 +31,13 @@ function renderContener(){
             </div> 
     </div>
     <div class="sticky-head">
-      <a href="#monetise">LIST A ROOM</a>
-      <a href="#visiter">TRAVAL</a>
-      <a href="#homestayInspiration">INSPIRE ME</a>
-      <a href="#homestayWeLove">OUR PICKS</a>
-      <a  class="pinkdiv"href="#container">Find a homestay</a>
+      <div><a href="#monetise">LIST A ROOM</a></div>
+      <div><a href="#visiter">TRAVAL</a></div>
+      <div><a href="#homestayInspiration">INSPIRE ME</a></div>
+      <div><a href="#homestayWeLove">OUR PICKS</a></div>
+      <div><a  class="pinkdiv"href="#container">Find a homestay</a></div>
     </div>
-    <main>
-        
+  
      <div class="video"id="visiter"></div>
      <div id="reviews-container"></div>
      <button id="Customer-reviews">See Customer Reviews</button>
@@ -85,7 +85,6 @@ function renderVideoDiv() {
         <p class="paragraph">Homestay.com connects host families with students and independent travellers looking for accommodation. The Homestay community offers you the opportunity to live with a local and to truly discover your destination. We offer a wide selection of rooms for both long and short term accommodation that offer great value for money, leaving you with more to spend enjoying your trip.</p>
         <div class=videodiv>
             <iframe width="760" height="315" src="https://www.youtube.com/embed/B0uYcxvPf1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="chat"></div>
         </div>`
 }
 function displayReviews() {
@@ -135,7 +134,7 @@ function renderInspiration() {
             <h2>${homestayInspriation.sectionTitle}</h2>
             <p>${homestayInspriation.sectionDescription}</p>
         </div>
-        <div class="Cart1">
+        <div class="Cart-1">
             ${homestayInspriation.cartItems.map(item => `
             <div class="cart-item" style="background-image: url(${item.imgUrl});">
                 <div class="title-container">
@@ -188,11 +187,19 @@ function renderHomeStay() {
     renderTrue();
     renderInspiration();
     renderHomestayWeLove();
-
+    
+    document.getElementById('menu-icon').addEventListener('click', function() {
+        const navItems = document.getElementById('nav-items');
+        navItems.classList.toggle('active'); 
+    });
 }
+
 document.addEventListener('click', function(event) {
     if (event.target && event.target.id === 'go-back-to-first-page') {
+        const container = document.querySelector("#container");
+        container.style.backgroundImage ='url("https://www.homestay.com/assets/homepage/hero/hero-d964776e555246a8c442f3cbca48c7412b066dee0fdf7cd76e162d9f6d40700f.jpg")';
       renderHomeStay();
     }
   });
+ 
 renderHomeStay();
